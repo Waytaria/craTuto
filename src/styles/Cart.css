@@ -1,0 +1,12 @@
+.cart {
+    width: calc(30% - 20px);
+    border : 5px solid black;
+    border-radius: 20px;
+    background-color: gray;
+    margin: 10px 0 10px 0;
+    padding: 0 10px 0 10px;
+}
+
+.cart:hover {
+    background-color: lightgray;
+}
