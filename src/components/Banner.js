@@ -1,12 +1,14 @@
 import '../styles/Banner.css';
-import logo from '../assets/logo.png'
 
-const Banner = () => {
-    const title = 'Pokeshop'
+const Banner = ({selected}) => {
+    console.log([...selected])
     return (
         <div className='lmj-banner'>
-            <img src={logo} alt='La maison jungle' className='lmj-logo' />
-            <h1 className='lmj-title'>{title}</h1>
+            <ul>
+                {[...selected].map((x) => {
+                    return <li key={"selected_" + x}>{x}</li>
+                })}
+            </ul>
         </div>
     )
 };

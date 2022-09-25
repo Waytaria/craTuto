@@ -1,6 +1,6 @@
-import '../styles/Cart.css'
+import '../styles/PokemonCard.css'
 
-const Cart = ({data}) =>  {
+const PokemonCard = ({data, selected, updateSelected}) =>  {
     return (
         <div className="cart">
             <h1>{data.name.english}</h1>
@@ -11,8 +11,16 @@ const Cart = ({data}) =>  {
                     )
                 })}
             </ul>}
+
+            <button onClick={() => {
+                updateSelected(data.id, true);
+            }}>Ajouter</button>
+
+            <button onClick={() => {
+                updateSelected(data.id, false);
+            }}>Supprimer</button>
         </div>
     );
 };
 
-export default Cart;
+export default PokemonCard;
